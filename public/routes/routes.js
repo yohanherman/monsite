@@ -4,8 +4,11 @@ router.get("/", (req, res) => {
   res.render("acceuil");
 });
 
-router.get("/sell", (req, res) => {
-  res.render("sell");
+router.get("/form", (req, res) => {
+  res.render("form");
+});
+router.get("/commentaire", (req, res) => {
+  res.render("commentaire");
 });
 
 module.exports = router;

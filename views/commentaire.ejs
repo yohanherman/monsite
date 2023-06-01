@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("./partials/head")%>
+  </head>
+  <body>
+    <%-include("./partials/header")%>
+   
+      <div class="form-container">
+        <form action="/commentaire" method="POST">
+          <p class="form-para">prière de renseigner tous les champs</p>
+          <div>
+            <label for="name">votre nom</label>
+            <input type="text" name="name" />
+          </div>
+
+          <div>
+            <textarea name="commentaire" id="commentaire">
+votre commentaire</textarea
+            >
+          </div>
+
+          <div>
+            <input type="submit" value="publier" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("./partials/head")%>
+  </head>
+  <body>
+    <%-include("./partials/header")%>
+    <div class="form-container">
+      <form action="data" method="POST">
+        <p>remplissez le formulaire</p>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" name="email" />
+        </div>
+        <div>
+          <label for="password">password</label>
+          <input type="password" name="password" />
+        </div>
+        <div>
+          <input type="submit" value="se connecter" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
