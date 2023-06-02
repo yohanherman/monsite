@@ -5,26 +5,33 @@
   </head>
   <body>
     <%-include("./partials/header")%>
-   
-      <div class="form-container">
-        <form action="/commentaire" method="POST">
-          <p class="form-para">prière de renseigner tous les champs</p>
-          <div>
-            <label for="name">votre nom</label>
-            <input type="text" name="name" />
-          </div>
 
-          <div>
-            <textarea name="commentaire" id="commentaire">
+    <div class="form-container">
+      <form action="/commentaire" method="POST">
+        <p class="form-para">Prière de renseigner tous les champs</p>
+        <div>
+          <label for="name">votre nom</label>
+          <input type="text" name="name" />
+          <span class="error1"></span>
+        </div>
+
+        <div>
+          <textarea name="commentaire" id="commentaire" class="error2">
 votre commentaire</textarea
-            >
-          </div>
+          >
+        </div>
 
-          <div>
-            <input type="submit" value="publier" />
-          </div>
-        </form>
-      </div>
+        <ul class="text-error" id="error"></ul>
+        <div>
+          <input type="submit" value="publier" />
+        </div>
+      </form>
     </div>
+    <section class="liste_com">
+      <div class="container-com">
+        <p>affichage commentaires</p>
+      </div>
+    </section>
+    <script src="/javascripts/script.js"></script>
   </body>
 </html>

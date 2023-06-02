@@ -9,24 +9,41 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  box-shadow: 0 0 8px rgb(18, 18, 18, 0.5);
   background-color: rgb(165, 241, 241);
   height: 50px;
+  margin: 5px 10px;
+  border-radius: 15px;
 }
 
 #logo {
   position: absolute;
   left: 10px;
 }
+ul {
+  list-style: none;
+}
 
 ul li {
   display: inline-block;
-  list-style: none;
 }
 a {
   text-decoration: none;
   margin-left: 60px;
   color: #333;
   font-weight: 700;
+}
+ul a {
+  text-transform: uppercase;
+  padding: 11px;
+}
+.navbar ul li a {
+  transition: all 0.5s;
+  border-radius: 15px;
+}
+
+.navbar ul li a:hover {
+  background: white;
 }
 
 .connexion {
@@ -74,7 +91,7 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 40vh;
-  border: solid 1px black;
+  box-shadow: 0 0 7px rgb(18, 18, 18, 0.5);
   border-radius: 10px;
   height: auto;
   width: 400px;
@@ -97,4 +114,17 @@ div {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+}
+.redirection {
+  margin-bottom: 30px;
+}
+.redirection a {
+  color: rgb(132, 240, 240);
+}
+
+/*gestion d'erreur formulaire */
+
+.text-error {
+  color: #e74c3c;
+  margin-top: 20px;
 }
