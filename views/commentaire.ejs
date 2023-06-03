@@ -7,12 +7,11 @@
     <%-include("./partials/header")%>
 
     <div class="form-container">
-      <form action="/commentaire" method="POST">
+      <form action="/commentaires" method="POST">
         <p class="form-para">Prière de renseigner tous les champs</p>
         <div>
           <label for="name">votre nom</label>
           <input type="text" name="name" />
-          <span class="error1"></span>
         </div>
 
         <div>
@@ -23,7 +22,7 @@ votre commentaire</textarea
 
         <ul class="text-error" id="error"></ul>
         <div>
-          <input type="submit" value="publier" />
+          <input type="submit" value="publier" class="input-btn" />
         </div>
       </form>
     </div>

@@ -84,7 +84,7 @@ p {
   margin-right: 20px;
 }
 
-/*formulaire commentaire */
+/*formulaire  */
 
 .form-container {
   display: flex;
@@ -109,6 +109,10 @@ input,
 textarea {
   outline: none;
 }
+textarea {
+  min-height: 75px;
+  max-height: 150px;
+}
 
 div {
   display: flex;
@@ -121,7 +125,9 @@ div {
 .redirection a {
   color: rgb(132, 240, 240);
 }
-
+.input-btn {
+  margin-bottom: 15px;
+}
 /*gestion d'erreur formulaire */
 
 .text-error {

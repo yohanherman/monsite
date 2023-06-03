@@ -5,6 +5,9 @@ const path = require("path");
 const morgan = require("morgan");
 const routes = require("./public/routes/routes");
 
+require("./public/javascripts/database/database");
+exports.app = app;
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 

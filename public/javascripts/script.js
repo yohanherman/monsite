@@ -1,7 +1,7 @@
+console.log("bb");
 //gestion d'erreur
 const form = document.querySelector("form");
 const errorElement = document.querySelector("#error");
-let errors = [];
 
 const validate = (e) => {
   e.preventDefault();
@@ -9,13 +9,23 @@ const validate = (e) => {
   const data = Object.fromEntries(formData.entries());
   if (formIsValid(data)) {
     const json = JSON.stringify(data);
-    //fetch()
+
+    fetch("http://localhost:3000/commentaires", {
+      method: "POST",
+      body: json,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }
 };
 
 const formIsValid = (data) => {
+  let errors = [];
   if (!data.name || !data.commentaire) {
-    errors.push("renseigner tous les champs");
+    errors.push("veuillez renseigner tous les champs");
   } else {
     errors = [];
   }
@@ -26,8 +36,10 @@ const formIsValid = (data) => {
       errorHTML += `<li>${e}</li>`;
     });
     errorElement.innerHTML = errorHTML;
+    return false;
   } else {
     errorElement.innerHTML = "";
+    return true;
   }
 };
 
