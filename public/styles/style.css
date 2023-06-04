@@ -90,7 +90,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40vh;
+  min-height: 20vh;
   box-shadow: 0 0 7px rgb(18, 18, 18, 0.5);
   border-radius: 10px;
   height: auto;
@@ -108,6 +108,8 @@ p {
 input,
 textarea {
   outline: none;
+  max-width: 400px;
+  min-width: 395px;
 }
 textarea {
   min-height: 75px;
@@ -128,6 +130,35 @@ div {
 .input-btn {
   margin-bottom: 15px;
 }
+
+/*style rendu des commentaires*/
+.markUp {
+  background: #aaa;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  box-shadow: 0 0 7px rgb(18 18 0.5);
+}
+
+.displayCom {
+  text-align: center;
+}
+
+button {
+  margin: 3px;
+  width: 100px;
+  display: inline-block;
+  border-radius: 7px;
+  border: none;
+}
+.divBtn {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
 /*gestion d'erreur formulaire */
 
 .text-error {

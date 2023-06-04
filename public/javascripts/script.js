@@ -1,4 +1,4 @@
-console.log("bb");
+const htmlRef = document.querySelector("#commentaires");
 //gestion d'erreur
 const form = document.querySelector("form");
 const errorElement = document.querySelector("#error");
@@ -10,6 +10,7 @@ const validate = (e) => {
   if (formIsValid(data)) {
     const json = JSON.stringify(data);
 
+    //envoi des donnees au serveur
     fetch("http://localhost:3000/commentaires", {
       method: "POST",
       body: json,
@@ -44,3 +45,26 @@ const formIsValid = (data) => {
 };
 
 form.addEventListener("submit", validate);
+
+//recuperation de toutes les donnees du serveur
+
+const promesse = fetch("http://localhost:3000/commentaires");
+promesse.then(async (res) => {
+  try {
+    const data = await res.json();
+    data.commentaires.map((commentaire) => {
+      markUp = `<div class="markUp">
+      <h4>${commentaire.name}</h4>
+      <p>${commentaire.commentaire}</p>
+      <div class="divBtn">
+      <button class="deleteBtn">supprimer</button>
+      <button>modifier</button>
+      </div>
+      </div>`;
+
+      htmlRef.insertAdjacentHTML("beforeend", markUp);
+    });
+  } catch (err) {
+    err.message;
+  }
+});
